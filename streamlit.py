@@ -1,7 +1,7 @@
 # Preprocessing
 import streamlit as st
 import pandas as pd
-df=pd.read_csv(r'instagram_data.csv')
+df=pd.read_csv('instagram_data.csv')
 import string
 import datetime
 def get_date(j):
