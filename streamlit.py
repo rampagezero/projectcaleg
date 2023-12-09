@@ -73,7 +73,7 @@ with tab1:
 with tab2:
     import streamlit as st
     from streamlit.components.v1 import html
-
+    st.write('Pendataan Profiling Pemilih Andi Asmara')
     def open_page(url):
         open_script= """
             <script type="text/javascript">
