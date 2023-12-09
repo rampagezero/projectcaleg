@@ -72,15 +72,15 @@ with tab1:
         st.plotly_chart(fig4,use_container_width=True)
 with tab2:
     import streamlit as st
-from streamlit.components.v1 import html
+    from streamlit.components.v1 import html
 
-def open_page(url):
-    open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_blank').focus();
-        </script>
-    """ % (url)
-    html(open_script)
-
-st.button('Open link', on_click=open_page, args=('https://forms.gle/rVYoAeuLWPjyjt4i8',))
-        
+    def open_page(url):
+        open_script= """
+            <script type="text/javascript">
+                window.open('%s', '_blank').focus();
+            </script>
+        """ % (url)
+        html(open_script)
+    
+    st.button('Open link', on_click=open_page, args=('https://forms.gle/rVYoAeuLWPjyjt4i8',))
+            
