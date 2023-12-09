@@ -71,10 +71,16 @@ with tab1:
     with st.container():
         st.plotly_chart(fig4,use_container_width=True)
 with tab2:
-    with st.form('Data Pendukung'):
-        nama=st.text_input('Nama')
-        alamat=st.text_input('Alamat')
-        umur=st.number_input('Umur')
-        pekerjaan=st.text_input('Pekerjaan')
-        st.form_submit_button('Submit')
+    import streamlit as st
+from streamlit.components.v1 import html
+
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
+
+st.button('Open link', on_click=open_page, args=('https://forms.gle/rVYoAeuLWPjyjt4i8',))
         
